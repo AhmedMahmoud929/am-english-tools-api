@@ -8,7 +8,14 @@ const app: Application = express();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+// Enable CORS for all routes
+app.use(
+  cors({
+    origin: ["https://am-english-tools.vercel.app", "http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Routes
 app.use(`${apiPrefix}/word-finder`, wordFinderRoutes);
@@ -16,7 +23,7 @@ app.use(`${apiPrefix}/comprehension-assessment`, compAssessRoutes);
 
 // For demonstration purposes, let's add a simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Server is running..." });
+  res.json({ message: "Server is running...", cors: "Updated" });
 });
 
 // Default error handling
