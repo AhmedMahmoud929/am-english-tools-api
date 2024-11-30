@@ -16,8 +16,8 @@ app.use((0, cors_1.default)());
 app.use(`${constants_1.apiPrefix}/word-finder`, wordFinder_route_1.default);
 app.use(`${constants_1.apiPrefix}/comprehension-assessment`, compAssess_route_1.default);
 // For demonstration purposes, let's add a simple route
-app.get("/test", (req, res) => {
-    res.json({ message: "CORS is now enabled for all origins!" });
+app.get("/", (req, res) => {
+    res.json({ message: "Server is running..." });
 });
 // Default error handling
 app.use((err, req, res, next) => {

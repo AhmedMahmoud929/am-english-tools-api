@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.geminiResponseSchema = exports.geminiPrompts = exports.geminiSystemInstructions = exports.geminiAPIKey = exports.geminiModel = void 0;
 const generative_ai_1 = require("@google/generative-ai");
 exports.geminiModel = "gemini-1.5-flash";
-exports.geminiAPIKey = process.env.GEMINI_API_KEY || "AIzaSyCNWah97hLHBBw9vjGKgnqq5ogambbKAzs";
+exports.geminiAPIKey = "AIzaSyCNWah97hLHBBw9vjGKgnqq5ogambbKAzs";
 exports.geminiSystemInstructions = {
     randomWordGenerator: `Generate a random English word suitable for the user's proficiency level and interest. Provide a simple definition, three example sentences, synonyms, antonyms, and highlight its usage in different contexts.`,
     wordFinder: `Help the user explore a specific word. Provide a simple definition, three example sentences, synonyms, antonyms, and highlight its usage in different contexts.`,
