@@ -15,8 +15,8 @@ app.use(`${apiPrefix}/word-finder`, wordFinderRoutes);
 app.use(`${apiPrefix}/comprehension-assessment`, compAssessRoutes);
 
 // For demonstration purposes, let's add a simple route
-app.get("/test", (req, res) => {
-  res.json({ message: "CORS is now enabled for all origins!" });
+app.get("/", (req, res) => {
+  res.json({ message: "Server is running..." });
 });
 
 // Default error handling
